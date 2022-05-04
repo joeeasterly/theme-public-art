@@ -14,7 +14,10 @@ if ($this->status()->isSiteRequest()) {
 }
 ?>
 <?php foreach ($values as $term => $propertyData): ?>
-    <div class="property">
+    <?php
+        # Public Art: get the property term and add it to the div as a css class
+         $term_css_class = str_replace(":","_",$escape($propertyData['property']->term())); ?>
+    <div class="property <?php echo $term_css_class;?>">
         <h4>
         <?php if ($propertyData['alternate_label']): ?>
         <?php echo $escape($propertyData['alternate_label']); ?>
