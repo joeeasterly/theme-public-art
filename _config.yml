@@ -1,0 +1,2 @@
+- name: ftp-action
+  uses: sebastianpopp/ftp-action@v2.0.0
