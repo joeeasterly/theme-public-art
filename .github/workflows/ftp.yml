@@ -9,9 +9,9 @@ jobs:
     - name: Upload ftp
       uses: sebastianpopp/ftp-action@releases/v2
       with:
-        host: ${{ secrets.ftp.dslab.digitalscholar.rochester.edu }}
-        user: ${{ secrets.jeasterly@dslab.digitalscholar.rochester.edu }}
-        password: ${{ secrets.pcn2BXW@nvc.yku2hze }}
+        host: ftp.dslab.digitalscholar.rochester.edu
+        user: jeasterly@dslab.digitalscholar.rochester.edu
+        password: pcn2BXW@nvc.yku2hze
         localDir: "."
         remoteDir: "public_html/public-art/themes/default"
         options: "--delete --asci"
