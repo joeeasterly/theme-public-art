@@ -1,2 +1,17 @@
-- name: ftp-action
-  uses: sebastianpopp/ftp-action@v2.0.0
+name: Deploy via ftp
+on: push
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Upload ftp
+      uses: sebastianpopp/ftp-action@releases/v2
+      with:
+        host: ${{ secrets.ftp.dslab.digitalscholar.rochester.edu }}
+        user: ${{ secrets.jeasterly@dslab.digitalscholar.rochester.edu }}
+        password: ${{ secrets.pcn2BXW@nvc.yku2hze }}
+        localDir: "."
+        remoteDir: "public_html/public-art/themes/default"
+        options: "--delete --asci"
